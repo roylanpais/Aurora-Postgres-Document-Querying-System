@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "<6"
+    }
+  }
+}
+
 resource "aws_rds_cluster" "aurora_serverless" {
   cluster_identifier      = var.cluster_identifier
   engine                  = "aurora-postgresql"
