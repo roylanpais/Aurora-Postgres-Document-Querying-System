@@ -1,4 +1,11 @@
-
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "<6"
+    }
+  }
+}
 
 resource "aws_iam_role" "bedrock_kb_role" {
   name = "${var.knowledge_base_name}-role"
